@@ -1,4 +1,5 @@
-/* via regular way to perorm hello world*/
+
+/* via regular way to perform hello world*/
 import java.io.*;
 import java.util.*;
 
@@ -9,7 +10,7 @@ public class Solution {
     }
 }
 
-/*for printing in multiline*/
+/* for printing in multiline */
 import java.io.*;
 import java.util.*;
 
@@ -25,7 +26,7 @@ public class Solution {
     }
 }
 
-/* for printing in multiline but typed in single line*/
+/* for printing in multiline but typed in single line */
 import java.io.*;
 import java.util.*;
 
