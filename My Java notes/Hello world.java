@@ -1,4 +1,3 @@
-
 /* via regular way to perform hello world*/
 import java.io.*;
 import java.util.*;
