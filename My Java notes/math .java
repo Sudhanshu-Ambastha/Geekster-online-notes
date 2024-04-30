@@ -1,4 +1,4 @@
-//Calc, Area & Parameter, Fahrenheit and Celcius, add last digit
+//Calc, Area & Parameter, Fahrenheit and Celcius, add last digit, area of circle, area of triangle
 // for writing '+' or '-' 
 import java.io.*;
 import java.util.*;
