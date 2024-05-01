@@ -128,3 +128,104 @@ public class Solution {
         System.out.println(area);
     }
 }
+
+//Greater than 100 or not
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int number = scn.nextInt();
+        
+        boolean isGreaterThan100 = number > 100;
+
+        System.out.println(isGreaterThan100 ? "True" : "False");
+    }
+}
+
+//xyzw
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int x = scn.nextInt();
+        int y = scn.nextInt();
+        int z = scn.nextInt();
+        int w = scn.nextInt();
+        
+        String ans = ((x * y) == (z * w)) ? "True" : "False";
+
+        System.out.println(ans);
+    }
+}
+
+//Even or not
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int a = scn.nextInt();
+        
+        String ans = (a % 2) == 0 ? "True" : "False";
+        
+        System.out.println(ans);
+    }
+}
+
+//Sum is less than 150 or not
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int x = scn.nextInt();
+        int y = scn.nextInt();
+        int z = scn.nextInt();
+        
+        String ans = (x + y + z) < 150 ? "True" : "False";
+        
+        System.out.println(ans);
+    }
+}
+
+//Greater than 1000 or not
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int x = scn.nextInt();
+        
+        String ans = (x) > 1000 ? "True" : "False";
+        
+        System.out.println(ans);
+    }
+}
+
+//Adult or not 1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int x = scn.nextInt();
+        
+        String ans = (x) >= 18 ? "Adult" : "Below age";
+        
+        System.out.println(ans);
+    }
+}
