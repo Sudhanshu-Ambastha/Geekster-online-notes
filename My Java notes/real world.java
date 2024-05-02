@@ -40,4 +40,49 @@ public class Solution {
     }
 }
 
-//
+//Grade the student 1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int marks = scn.nextInt();
+      
+        String performance;
+        if (marks > 90) {
+            performance = "excellent";
+        } else if (marks > 80) {
+            performance = "good";
+        } else if (marks > 70) {
+            performance = "fair";
+        } else if (marks > 60) {
+            performance = "meets expectations";
+        } else if (marks > 40) {
+            performance = "below par";
+        } else {
+            performance = "failed";
+        }
+
+        System.out.println("" + performance);
+    }
+}
+
+//Print Bonus
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int salary = scn.nextInt();
+        int years = scn.nextInt();
+
+        if (years > 5) {
+            double bonus = (salary * 0.05); 
+            System.out.println((int) bonus);
+        } else {
+            System.out.println(0);
+        }
+    }
+}
