@@ -290,3 +290,188 @@ public class Main {
         return z;
     }
 }
+
+//runner up
+import java.io.*;
+import java.util.*;
+
+public class SecondLargest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int C = scanner.nextInt();
+
+        int secondLargest = findSecondLargest(A, B, C);
+
+        System.out.println(secondLargest);
+        
+        scanner.close();
+    }
+    
+    public static int findSecondLargest(int A, int B, int C) {
+        
+        int max = Math.max(A, Math.max(B, C));
+        
+        int min = Math.min(A, Math.min(B, C));
+        
+        int middle = A + B + C - max - min;
+        
+        return middle;
+    }
+}
+
+//HW_Marks of a student in 5 subjects
+import java.io.*;
+import java.util.*;
+
+public class StudentMarksCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double subject1 = scanner.nextDouble();
+        double subject2 = scanner.nextDouble();
+        double subject3 = scanner.nextDouble();
+        double subject4 = scanner.nextDouble();
+        double subject5 = scanner.nextDouble();
+
+        double totalMarks = subject1 + subject2 + subject3 + subject4 + subject5;
+
+        double maxMarks = 500.0;
+        double percentage = (totalMarks / maxMarks) * 100.0;
+
+        System.out.printf("%.1f%n", totalMarks);
+        System.out.printf("%.1f%n", percentage);
+    }
+}
+
+//HW_abcd 88
+import java.io.*;
+import java.util.*;
+
+public class ProductEvaluator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+        int num4 = scanner.nextInt();
+
+        long product = (long) num1 * num2 * num3 * num4;
+
+        boolean isGreaterThan1000 = product > 1000;
+
+        System.out.println(isGreaterThan1000);
+    }
+}
+
+//HW_Grace Marks 1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+
+        int marks = scanner.nextInt();
+
+       if(marks <33){
+          int gracemarks = (marks + 4);
+          System.out.println(gracemarks);
+       }else{
+          System.out.println("no grace marks");
+       }         
+    }
+}
+
+//Print the final incremented salary
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+         int age = scn.nextInt();
+         int salary = scn.nextInt();
+         int experience = scn.nextInt();
+
+        if(age > 60 && salary >20000 && experience > 20){
+          salary += 5000;
+        }else if(age > 40 && salary >15000 && experience > 10){
+          salary += 2000;
+        }else if(age > 30 && salary >10000 && experience > 5){
+          salary += 1000;
+        }else{
+          salary += 500;
+        }
+          System.out.println(salary);
+    }
+}
+
+//Tell about x y
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int X = scanner.nextInt();
+        int y = scanner.nextInt();
+
+        if(X >= 59 && y >= 10){
+         System.out.println("X is greater than or equal to 59 and y is greater than or equal to 10");
+        }else if(X >= 50 && y<10){
+          System.out.println("X is greater than or equal to 50 and y is less than 10");
+        }else {
+          System.out.println("None of the condition matches");
+        }
+    }
+}
+
+//Print final z given xyz
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+         int x = scn.nextInt();
+         int y = scn.nextInt();
+         int z = scn.nextInt();
+
+         if(x>=20 && z<100){
+           z= (z + 200);
+         }else if(x>=10 || y<50){
+           z= (z + 100);
+         }
+          System.out.println(z);
+    }
+}
+
+//Print if divisible by both 3 and 4
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int x = scanner.nextInt();
+
+        if(x % 3 == 0 && x % 4 == 0){
+          System.out.println("Divisible by 3 and 4");
+        } else {
+          System.out.println("Not Divisible");
+        }
+    }
+}
