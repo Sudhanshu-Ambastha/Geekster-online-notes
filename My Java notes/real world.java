@@ -475,3 +475,158 @@ public class Solution {
         }
     }
 }
+
+//Print z and x divisible by 3
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+         int x = scn.nextInt();
+         int y = scn.nextInt();
+         int z = scn.nextInt();
+
+         if (x % 3 == 0) {
+            if (y >= 200) {
+                z += 10;
+            } else if (y >= 100) {
+                z += 5;
+            } else if (y >= 50) {
+                z += 4;
+            } else {
+                z += 1;
+            }
+        } else {
+            if (y >= 200) {
+                z += 3;
+            } else if (y >= 100) {
+                z += 2;
+            } else {
+                z += 1;
+            }
+        }
+
+        z += 10;
+
+        System.out.println("" + z);
+    }
+}
+
+//Grade the student-2
+import java.io.*;
+import java.util.*;
+
+public class GradeMessage {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("");
+        char grade = scanner.next().charAt(0);
+
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Well done!");
+                break;
+            case 'C':
+                System.out.println("You passed!");
+                break;
+            case 'F':
+                System.out.println("Better luck next time!");
+                break;
+            default:
+                System.out.println("Invalid grade.");
+                break;
+        }
+    }
+}
+
+//Switch Calculator 1
+import java.io.*;
+import java.util.*;
+
+public class OperationsBasedOnN {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int N = scanner.nextInt();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        switch (N) {
+            case 10:
+                System.out.println(a + b);
+                break;
+            case 20:
+                System.out.println(a - b);
+                break;
+            case 30:
+                System.out.println(a * b);
+                break;
+            case 40:
+                System.out.println(a % b);
+                break;
+            case 50:
+                System.out.println(a / b);
+                break;
+            default:
+                System.out.println("");
+                break;
+        }
+    }
+}
+
+//HW_Height, weight and age
+import java.io.*;
+import java.util.*;
+
+public class HealthStatusChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int height = scanner.nextInt();
+        int weight = scanner.nextInt();
+        int age = scanner.nextInt();
+        String status;
+
+        if (height == 5 && weight == 50 && age == 10) {
+            status = "Overweight";
+        } else if (height == 5 || weight == 60) {
+            status = "Fat";
+        } else if (height == 6 && weight == 50) {
+            status = "Slim";
+        } else {
+            status = "None";
+        }
+
+        System.out.println(status);
+    }
+}
+
+//HW_print above given ab
+import java.io.*;
+import java.util.*;
+
+public class ConditionalOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        if (a > 100 && b > 10) {
+            System.out.println("a is above 100 and b is above 10");
+        } else if (a > 50 && b > 50) {
+            System.out.println("a is above 50 and b is above 50");
+        } else if (a > 20 && b > 100) {
+            System.out.println("a is above 20 and b is above 100");
+        } else {
+            System.out.println("None");
+        }
+    }
+}
