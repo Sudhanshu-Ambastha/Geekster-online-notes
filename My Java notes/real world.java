@@ -629,3 +629,149 @@ public class ConditionalOperations {
         }
     }
 }
+
+//HW_Top Management or not
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        // input for experience
+        double XP = scanner.nextDouble();
+        //input for Salary
+        double PAY = scanner.nextDouble();
+        //input for Rank
+        double RK = scanner.nextDouble();
+
+        if (XP >= 10 || PAY >= 50000 || RK >= 10) {
+            System.out.println("You are in top management");
+        } else {
+            System.out.println("You are not in top management");
+        }
+    }
+}
+
+//HW_Marks and Rank
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+
+        double marks = scanner.nextDouble();
+        double rank = scanner.nextDouble();
+
+          if (marks < 20 || rank > 100) {
+            System.out.println("Needs improvement");
+        } else if (marks < 40 || rank > 80) {
+            System.out.println("Concentrate");
+        } else if (marks < 60 || rank > 120) {
+            System.out.println("Needs to focus");
+        } else if (marks > 100 || rank < 10) {
+            System.out.println("Very good");
+        } else {
+            System.out.println("Bright Student");
+        }
+    }
+}
+
+//HW_Print the day
+import java.io.*;
+import java.util.*;
+
+public class DayOfWeek {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("");
+        int dayNumber = scanner.nextInt();
+
+        switch (dayNumber) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("");
+                break;
+        }
+    }
+}
+
+//HW_Print the month
+import java.io.*;
+import java.util.*;
+
+public class DayOfWeek {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("");
+        int dayNumber = scanner.nextInt();
+
+        switch (dayNumber) {
+            case 1:
+                System.out.println("January");
+                break;
+            case 2:
+                System.out.println("February");
+                break;
+            case 3:
+                System.out.println("March");
+                break;
+            case 4:
+                System.out.println("April");
+                break;
+            case 5:
+                System.out.println("May");
+                break;
+            case 6:
+                System.out.println("June");
+                break;
+            case 7:
+                System.out.println("July");
+                break;
+            case 8:
+                System.out.println("August");
+                break;
+            case 9:
+                System.out.println("September");
+                break;
+            case 10:
+                System.out.println("October");
+                break;
+            case 11:
+                System.out.println("November");
+                break;
+            case 12:
+                System.out.println("December");
+                break;        
+            default:
+                System.out.println("Invalid Number");
+                break;
+        }
+    }
+}
