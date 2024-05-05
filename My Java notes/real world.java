@@ -519,14 +519,13 @@ public class Solution {
 import java.io.*;
 import java.util.*;
 
-public class GradeMessage {
+public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.print("");
-        char grade = scanner.next().charAt(0);
-
-        switch (grade) {
+        
+       char ch = scanner.next().charAt(0);
+        
+        switch (ch) {
             case 'A':
                 System.out.println("Excellent!");
                 break;
@@ -540,12 +539,12 @@ public class GradeMessage {
                 System.out.println("Better luck next time!");
                 break;
             default:
-                System.out.println("Invalid grade.");
+                System.out.println("Invalid grade");
                 break;
         }
+        scanner.close();
     }
 }
-
 //Switch Calculator 1
 import java.io.*;
 import java.util.*;
