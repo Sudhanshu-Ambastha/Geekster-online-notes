@@ -19,4 +19,71 @@ public class Solution {
     }
 }
 
-//
+//jumping character
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        char ch = scn.next().charAt(0);   
+
+      if(ch >= 'a' && ch <= 'z'){
+        if(ch >= 'a' && ch <= 'w'){
+           ch =(char) (ch + 3);
+            System.out.println(ch);
+        }else{
+            System.out.println("Can't jump");
+        }
+      }else if(ch >= 'A' && ch <= 'Z'){
+           if (ch >= 'D' && ch <= 'Z'){
+           ch =(char) (ch - 3);
+             System.out.println(ch);
+        }else {
+            System.out.println("Can't jump");
+        }
+      }
+   }
+}
+
+//Small Capital or Digit
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        char ch = scn.next().charAt(0);   
+
+        if( ch >= 'a' && ch <= 'z' ){
+         System.out.println("Small case");
+        }else if( ch >= 'A' && ch <= 'Z' ){
+         System.out.println("Capital case");
+        }else if( ch >= '0' && ch <= '9' ){
+         System.out.println("Digit");
+        }else{
+         System.out.println("None");
+        }
+    }
+}
+
+//Add if a digit
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        char ch = scn.next().charAt(0);   
+
+        if( ch >= '0' && ch <= '9' ){
+           int num = ( ch - '0' );
+         System.out.println(num + 100);
+        }else{
+          System.out.println("This is not a digit");
+        }
+    }
+}
