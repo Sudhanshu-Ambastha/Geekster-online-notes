@@ -87,3 +87,42 @@ public class Solution {
         }
     }
 }
+
+// Toggle the character
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        char ch = scn.next().charAt(0);   
+
+        if( ch >= 'a' && ch <= 'z' ){
+         System.out.println((char)(ch-32));
+        }
+         else if( ch >= 'A' && ch <= 'Z' ){
+          System.out.println((char)(ch+32));
+        } 
+    }
+}
+
+// Print character at 3rd index
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+     Scanner s = new Scanner(System.in);
+     String str = s.nextLine();   
+
+     if(str.length() >= 4){
+      char ch = str.charAt(3);
+      System.out.println(ch);
+     }
+      else{
+        System.out.println("Small string");
+      }
+  }
+}
