@@ -205,3 +205,131 @@ public class Solution {
         }
     }
 }
+
+//HW_Concatenate 3 strings
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        String str1 = scn.nextLine();
+        String str2 = scn.nextLine();
+        String str3 = scn.nextLine();
+
+        String str = str1 + str2 + str3;
+        int length = str.length();
+        char charAtIndex2 = str.charAt(2);
+  
+        System.out.println(length);
+        System.out.println(charAtIndex2);
+    }
+}
+
+//Hw_Print two-digit number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+         char x = scn.next().charAt(0);
+         char y = scn.next().charAt(0);
+
+          int digitX = ((x - '0'));
+          int digitY = ((y - '0'));
+         
+          
+         if( x == 0){
+          System.out.println(digitY);
+         }else{
+         System.out.println(digitX * 10 + digitY);
+         }
+    }
+}
+
+// HW_Toggle and 2 jumps left
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+         char x =  scn.next().charAt(0);
+
+         char toggledChar;
+        if (Character.isUpperCase(x)) {
+            toggledChar = Character.toLowerCase(x);
+        } else {
+            toggledChar = Character.toUpperCase(x);
+        }
+
+        if (toggledChar == 'a' || toggledChar == 'A' || toggledChar == 'b' || toggledChar == 'B') {
+            System.out.println("Sorry");
+        } else if (toggledChar == 'c') {
+            System.out.println("a");
+        } else if (toggledChar == 'Z') {
+            System.out.println("X");
+        } else if (!Character.isLetter(x)) {
+            System.out.println("No alphabet");
+        }else {
+            char resultChar = (char) (toggledChar - 2);
+            System.out.println(resultChar);
+        }
+    }
+}
+
+//HW_UpperCase_Or_LowerCase
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+         char ch =  scn.next().charAt(0);
+
+         if( ch >= 'a' && ch <= 'z' ){
+         System.out.println("Char is Lowercase");
+        }
+         else if( ch >= 'A' && ch <= 'Z' ){
+          System.out.println("Char is Uppercase");
+        } 
+    }
+}
+
+//GKSTR09 Print_Range
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt(); 
+
+        for(int i = 1; i<= n; i++){
+         System.out.println(i);
+        }
+    }
+}
+
+//Print x to n
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int x = scn.nextInt(); 
+        int n = scn.nextInt(); 
+
+        for(int i = x; i<=n; i++){
+         System.out.println(i);
+        }
+    }
+}
