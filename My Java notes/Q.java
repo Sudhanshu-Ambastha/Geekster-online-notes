@@ -575,3 +575,111 @@ public class Solution {
         }
     }
 }
+
+//HW_Print multiples of 8 from n to 1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = n; i>=1; i --){
+         if(i % 8 ==0){
+        System.out.print(i + " "); 
+        }
+        }
+    }
+}
+
+//Print n, n-3, n-6 .....
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        if (n >= 0) {
+            while (n > 0) {
+                System.out.println(n);
+                n -= 3;
+            }
+        } 
+    }
+}
+
+//Print n, n-k, n-2k, n-3k .....
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        long N = input.nextLong();
+        long K = input.nextLong();
+
+        while (N >= 0) {
+            System.out.println(N);
+            N -= K;
+        }
+    }
+}
+
+//print a to z
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        char start = 'a';
+        char end = 'z';
+
+        for (char ch = start; ch <= end; ch++) {
+            System.out.println(ch);
+        }
+    }
+}
+
+//Print a, c, e... till the characters are less than z
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        char start = 'a';
+        char end = 'z';
+
+        for (char ch = start; ch <= end; ch += 2) {
+            System.out.println(ch);
+        }
+    }
+}
+
+//Print a, B, c, D, e, F, g...... 26 characters
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        final int NUM_ITERATIONS = 26;
+        char currentChar = 'a';
+        
+        for (int iteration = 0; iteration < NUM_ITERATIONS; iteration++) {
+            if (iteration % 2 == 0) {
+                System.out.println(Character.toLowerCase(currentChar));
+            } else {
+                System.out.println(Character.toUpperCase(currentChar));
+            }
+            currentChar++;
+        }
+    }
+}
