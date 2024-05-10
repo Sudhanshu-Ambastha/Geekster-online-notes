@@ -333,3 +333,245 @@ public class Solution {
         }
     }
 }
+
+//Print table of 4
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        for(int i = 1; i<=10; i++){
+        System.out.println("4x" + i + "=" + (4 * i)); 
+        }
+    }
+}
+
+// GKSTR11 Multiple Of 7
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = 0; i<=n; i += 7){
+        System.out.print(i + " "); 
+        }
+    }
+}
+
+// Print 2,9,16...
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = 2; i<=n; i += 7){
+        System.out.println(i); 
+        }
+    }
+}
+
+//Print 3 7 11 15...
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = 3; i<n; i += 4){
+        System.out.println(i); 
+        }
+    }
+}
+
+// Print n to 1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = n; i>=1; i--){
+        System.out.println(i); 
+        }
+    }
+}
+
+// Print n to 0
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = n; i>=0; i--){
+        System.out.println(i); 
+        }
+    }
+}
+
+// Print n to x
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int x = scn.nextInt();
+
+        for(int i = n; i>=x; i--){
+        System.out.println(i); 
+        }
+    }
+}
+
+//Reverse 5 table
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        for(int i = 10; i >= 1; i--){
+        System.out.println("5x" + i + "=" + (5 * i)); 
+        }
+    }
+}
+
+// print odd from n to 1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        if (n % 2 == 0){
+         n--;
+        }
+
+        for(int i = n; i>=1; i -= 2){
+        System.out.println(i); 
+        }
+    }
+}
+
+//HW_Print numbers 20 to n
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int N = scn.nextInt();
+
+         for(int i = 20; i <= N; i++){
+          System.out.print(i + " "); 
+        }
+    }
+}
+
+//HW_Print first N multiples of 9
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = 1; i<=n; i ++){
+        System.out.print(9 * i + " "); 
+        }
+    }
+}
+
+//HW_Print first n multiples of 11.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = 1; i<=n; i ++){
+        System.out.print(11 * i + " "); 
+        }
+    }
+}
+
+//HW_Print Series 3, 11, 19...
+
+
+//HW_Print n to 5
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = n; i>=5; i--){
+        System.out.print(i + " "); 
+        }
+    }
+}
+
+//HW_Print Series 3, 11, 19...
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = 3; i <= n; i += 8){
+        System.out.print(i + " "); 
+        }
+    }
+}
+
+//HW_Print series 13, 18, 23, 28...
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        for(int i = 13; i <= n; i += 5){
+        System.out.print(i + " "); 
+        }
+    }
+}
