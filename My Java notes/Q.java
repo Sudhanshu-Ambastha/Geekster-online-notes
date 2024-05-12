@@ -683,3 +683,109 @@ public class Solution {
         }
     }
 }
+
+//Count 's' 'a' Characters.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        
+        int countS = 0;
+        int countA = 0;
+        
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 's' || str.charAt(i) == 'S') {
+                countS++;
+            } else if (str.charAt(i) == 'a' || str.charAt(i) == 'A') {
+                countA++;
+            }
+        }
+        
+        System.out.println(countS + " " + countA);
+    }
+}
+
+//Apple battery
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int batteryHealth = sc.nextInt();
+    
+        if(batteryHealth >= 80) {
+         System.out.println("Yes");
+        } else {
+         System.out.println("No");
+        }
+    }
+}
+
+//Diff Sum
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        if (a > b) {
+            System.out.println(a - b);
+        } else {
+            System.out.println(a + b);
+        }
+    }
+}
+
+//Chess Format 1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int total = a + b;
+
+        if (total < 3) {
+            System.out.println(1); // Bullet
+        } else if (total >= 3 && total <= 10) {
+            System.out.println(2); // Blitz
+        } else if (total >= 11 && total <= 60) {
+            System.out.println(3); // Rapid
+        } else {
+            System.out.println(4); // Classical
+        }
+
+        scanner.close();
+    }
+}
+
+//Watermelon 36
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+        int w = scanner.nextInt();
+        if (w % 2 == 0 && w > 2) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}
