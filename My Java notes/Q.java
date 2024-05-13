@@ -789,3 +789,49 @@ public class Solution {
         }
     }
 }
+
+//Print z, y, x.... till 26 characters
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         char c = 'z'; 
+           for (int i = 0; i < 26; i++) { 
+               System.out.println(c); 
+                c--; 
+      } 
+    }
+}
+
+//GKSTR15 Print_Even
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int k = scanner.nextInt();
+        
+        while (n > 0) {
+            System.out.print(n + " ");
+            n -= 3 * k;
+        }
+    }
+}
+
+//HW_Print Alphabets A-Z
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        for (char ch = 'A'; ch <= 'Z'; ch++) {
+            System.out.print(ch + " ");
+        }
+    }
+}
