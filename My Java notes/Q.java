@@ -854,3 +854,62 @@ public class Solution {
         }
     }
 }
+
+//Running Sum for loop
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+     Scanner scn = new Scanner(System.in);
+         int n = scn.nextInt();
+         int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            int num = scn.nextInt();
+            sum += num;
+            System.out.print(sum + " ");
+       }
+    }
+}
+
+//Print 4,13,22,31.....n
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    // from 4 to 9 by +9
+    public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+      int n = scn.nextInt();
+
+      int i = 4;
+      while (i<=n){
+      System.out.println(i);
+       i+=9;
+     }
+    }
+}
+
+//Print n, n-k, n-2k, n-3k.... till l
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int k = scn.nextInt();
+        int l = scn.nextInt();
+        
+        int i= n;
+        while(i>=l){
+         System.out.println(i);
+          i -= k;
+        }
+    }
+}
+
