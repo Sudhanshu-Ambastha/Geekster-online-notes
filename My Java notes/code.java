@@ -83,3 +83,114 @@ public class Solution {
         }
     }
 }
+
+//Print nth Tribonacci number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        if(n==0){
+            System.out.println(0);
+        }else if(n==1){
+            System.out.println(1);
+        }else if(n==2){
+            System.out.println(1);
+        }else{
+            
+            int a = 0;
+            int b = 1;
+            int c = 1;
+            int sum = 0;
+            for (int i = 3; i <= n; i++){
+                sum=a+b+c;
+                a = b;
+                b = c;
+                c = sum;
+            }
+            System.out.println(sum);
+        }
+    }
+}
+
+//Print all digits from end
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        while (n > 0){
+            int rem = n % 10;
+            n = n/10;
+            System.out.println(rem);
+        }
+    }
+}
+
+//GKSTR46 Number of Digits
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int digit = 0;
+        while( n > 0){
+            n = n/10;
+            digit++;
+        }
+        System.out.println(digit);
+    }
+}
+
+//Print total steps when n/2
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int steps = 0;
+        while(n>=1){
+            n = n/2;
+            steps++;
+        }
+        System.out.println(steps);
+    }
+}
+
+//Print steps and update maximum
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int count = 0;
+        int maximal = -100;
+        for(int i = 0; i< n; i++){
+            int num = scn.nextInt();
+            
+            if(num> maximal){
+                count++;
+                maximal = num;
+            }
+        }
+        System.out.println(count);
+    }
+}
