@@ -194,3 +194,151 @@ public class Solution {
         System.out.println(count);
     }
 }
+
+//GKSTR17 Pattern_2
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int row = scn.nextInt();
+        
+        int st = 1;
+        for(int i = 0; i < row; i++){
+            for(int j =0; j < st; j++){
+                System.out.print((j+ 1) + " ");
+            }
+            st++;
+            System.out.println();
+        }
+    }
+}
+
+//Pattern 6 - Right triangle of 5 multiples
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int row = scn.nextInt();
+        
+        int st = 1;
+        for(int i = 0; i < row; i++){
+            for(int j =0; j < st; j++){
+                System.out.print((j+ 1) * 5 + "\t");
+            }
+            st++;
+            System.out.println();
+        }
+    }
+}
+
+//Pattern 7 - Print a hollow m by n star rectangle.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int col = scn.nextInt();
+        int row = scn.nextInt();
+        
+        for (int i = 0; i < row; i++){
+            for(int j = 0; j< col; j++){
+                if(i==0 || j==0 || i==row-1 || j == col-1){
+                System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+//Pattern 8 - Print a hollow square without top
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        for (int i = 0; i < n; i++){
+            for(int j = 0; j< n; j++){
+                if(j==0 || i==n-1 || j == n-1){
+                System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+//GKSTR24 Pattern_7_Pyramid
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int st=1;
+        int sp=n-1;
+        for(int i=0; i<n; i++){
+            for(int j=0;j<sp;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<st;j++){
+                System.out.print("* ");
+            }
+            sp--;
+            st++;
+            System.out.println();
+        }
+    }
+}
+
+//GKSTR29_Pattern_12_Diamond
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        // Upper half
+        for(int i=0; i<n; i++){
+            for(int j=0;j<n-i-1;j++){
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i+1;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+        // Lower half
+        for(int i=n-2; i>=0; i--){
+            for(int j=0;j<n-i-1;j++){
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i+1;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
