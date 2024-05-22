@@ -525,9 +525,6 @@ public class Solution {
     }
 }
 
-//HW_Print Series 3, 11, 19...
-
-
 //HW_Print n to 5
 import java.io.*;
 import java.util.*;
@@ -851,6 +848,308 @@ public class Solution {
                 System.out.println("" + (char)(ch + 32) + (char)(ch + 32));
             }
             ch++;
+        }
+    }
+}
+
+//HW_Print Z,z,X,x,V,v till A,a. using loop
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        char currentChar = 'Z';
+
+        // Loop until we reach 'A'
+        while (currentChar >= 'A') {
+            // Print uppercase and lowercase characters
+            System.out.print(currentChar + " " + Character.toLowerCase(currentChar) + " ");
+            currentChar--; // Move to the previous character
+        }
+    }
+}
+
+//Print Alternate Elements of a String
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        String input = scanner.nextLine();
+        scanner.close();
+
+        String result = getAlternateCharacters(input);
+        System.out.println("" + result);
+    }
+
+    public static String getAlternateCharacters(String str) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < str.length(); i += 2) {
+            result.append(str.charAt(i));
+        }
+        return result.toString();
+    }
+}
+
+//Reverse The String
+Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        scanner.close();
+
+        String reversedString = reverseString(input);
+        System.out.println("Reversed string: " + reversedString);
+    }
+
+    public static String reverseString(String str) {
+        StringBuilder result = new StringBuilder();
+        for (int i = str.length() - 1; i >= 0; i--) {
+            result.append(str.charAt(i));
+        }
+        return result.toString();
+    }
+}
+
+//nth power of 2
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        long result = nthPowerOf2(n);
+        System.out.println("" + result);
+    }
+
+    public static long nthPowerOf2(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("");
+        }
+        return (long) Math.pow(2, n);
+    }
+}
+
+//Print powers of 2 less than n
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        printPowersOf2(n);
+    }
+
+    public static void printPowersOf2(int n) {
+        int highestPower = highestPowerOf2(n);
+        for (int i = 1; i <= highestPower; i *= 2) {
+            System.out.print(i + " ");
+        }
+    }
+
+    public static int highestPowerOf2(int n) {
+        int res = 0;
+        for (int i = n; i >= 1; i--) {
+            if ((i & (i - 1)) == 0) {
+                res = i;
+                break;
+            }
+        }
+        return res;
+    }
+}
+
+//Print powers of 2 less than n
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        printPowersOf2(n);
+    }
+
+    public static void printPowersOf2(int n) {
+        int highestPower = highestPowerOf2(n);
+        for (int i = 1; i <= highestPower; i *= 2) {
+            System.out.print(i + " ");
+        }
+    }
+
+    public static int highestPowerOf2(int n) {
+        int res = 0;
+        for (int i = n; i >= 1; i--) {
+            if ((i & (i - 1)) == 0) {
+                res = i;
+                break;
+            }
+        }
+        return res;
+    }
+}
+
+//Print n/3
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        while (n > 0) {
+            System.out.print(n + " ");
+            n /= 3; // Update n by dividing it by 3
+        }
+    }
+}
+
+//Multiples of 3, 5 and Both 3 and 5
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        List<Integer> multiples = findMultiples(n);
+        for (int num : multiples) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static List<Integer> findMultiples(int n) {
+        List<Integer> multiples = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                multiples.add(i); // Both 3 and 5
+            } else if (i % 3 == 0) {
+                multiples.add(i); // Only multiple of 3
+            } else if (i % 5 == 0) {
+                multiples.add(i); // Only multiple of 5
+            }
+        }
+        return multiples;
+    }
+}
+
+//HW_Print Vowels in the string
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        String input = scanner.nextLine();
+        scanner.close();
+
+        printVowels(input);
+    }
+
+    public static void printVowels(String str) {
+        str = str.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+        for (char ch : str.toCharArray()) {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                System.out.println(ch + " ");
+            }
+        }
+    }
+}
+
+//HW_Print power of 17 from 1 to n
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        printPowersOf17(n);
+    }
+
+    public static void printPowersOf17(int n) {
+        long result = 1; // Initialize with 17^0 = 1
+        for (int i = 1; i <= n; i++) {
+            result *= 17; // Calculate the next power of 17
+            System.out.print(result + " ");
+        }
+    }
+}
+
+//HW_Print numbers 1-n in separate lines.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        printNumbers(n);
+    }
+
+    public static void printNumbers(int n) {
+        for (int i = 1; i <= n; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+//HW_FizzBuzz problems
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 7 == 0) {
+                System.out.print("FizzBuzz ");
+            } else if (i % 3 == 0) {
+                System.out.print("Fizz ");
+            } else if (i % 7 == 0) {
+                System.out.print("Buzz ");
+            } else {
+                System.out.print(i + " ");
+            }
         }
     }
 }
