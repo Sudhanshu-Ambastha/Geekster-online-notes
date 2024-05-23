@@ -319,26 +319,55 @@ public class Solution {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         
-        // Upper half
-        for(int i=0; i<n; i++){
-            for(int j=0;j<n-i-1;j++){
-                System.out.print(" ");
-            }
-            for(int k=0;k<2*i+1;k++){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        int sp = n - 1;
+        int st = 1;
+        int rows = 2 * n - 1;
         
-        // Lower half
-        for(int i=n-2; i>=0; i--){
-            for(int j=0;j<n-i-1;j++){
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < sp; j++) {
                 System.out.print(" ");
             }
-            for(int k=0;k<2*i+1;k++){
+            for (int j = 0; j < st; j++) {
                 System.out.print("*");
+            }
+            
+            if (i < rows/2) {
+                sp--;
+                st += 2;
+            } else {
+                sp++;
+                st -= 2;
             }
             System.out.println();
         }
     }
 }
+
+//Pattern 9 - Square Ladder with top and bottom
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(i % 2 == 0){
+                    System.out.print("*\t");
+                }else{
+                    if(j==0 || j ==n-1){
+                       System.out.print("*\t");
+                    }else{
+                        System.out.print("\t");
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
+}  
+
+//
