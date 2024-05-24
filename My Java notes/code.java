@@ -20,7 +20,63 @@ public class Solution {
     }
 }
 
-//teps till n greater than 0
+//Print 0 to n
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for (int i = 0; i <= n; i++) {
+            System.out.println(i);
+        }
+
+        sc.close();
+    }
+}
+
+//Printing 5 to N(While Loop)
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); 
+        int n = scanner.nextInt();
+        int i = 5;
+        while(i <= n) {
+            System.out.println(i);
+            i++;
+        }
+        scanner.close();
+    }
+} 
+
+//HW_Print till n for this Series 5,11,17,23,29..
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("");
+        int n = input.nextInt();
+        
+        int start = 5;
+        while (start <= n) {
+            System.out.println(start);
+            start += 6;
+        }
+    }
+}
+
+//steps till n greater than 0
 import java.io.*;
 import java.util.*;
 
@@ -390,5 +446,153 @@ public class Solution {
     public static void sum(int x, int y){
         int ans = x+y;
         System.out.println(ans);
+    }
+}
+
+
+//HW_Print Big Ladder
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int col = scn.nextInt();
+        int row = scn.nextInt();
+        for(int i = 0; i < row; i++){
+            for (int j = 0; j < col; j++) {
+                if((i % 3 == 0 && i != 0) || j == 0 || j == col-1 || i == 0){
+                    System.out.print("*\t");
+                } else {
+                    System.out.print(" \t");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+//HW_Print the Number Pattern 2
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int k = scn.nextInt();
+        
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= n-i; j++){
+                System.out.print("   "); // print three spaces for each iteration
+            }
+            for(int j = 1; j <= i; j++){
+                int num = j * k;
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//HW_Print V Pattern
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int rows = (n + 1)/2;
+        for (int i = 0; i < rows; i ++) {
+            for (int j = 0; j < n; j++) {
+                if (i == j || i + j == n-1) {
+                    System.out.print("*\t"); // Printing spaces
+                } else {
+                    System.out.print("\t"); // Printing "*"
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+//Find product of the two numbers using function.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        
+        int t =scn.nextInt();
+        for (int i=0; i<t; i++){
+            int x = scn.nextInt();
+            int y = scn.nextInt();
+        
+            findProduct(x, y);
+        }
+    }
+    
+    public static void findProduct(int x, int y){
+        System.out.println(x * y);
+    }
+}
+
+//Factorial of N
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        fact(n);
+    }
+    
+    public static void fact(int n){
+        long ans = 1;
+        for(int i = 1; i <= n; i++){
+            ans *= i;
+        }
+        System.out.println(ans);
+    }
+}
+
+//Find nCr.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int r = scn.nextInt();
+        
+        findComb(n, r);
+    }
+    
+    public static void findComb(int n, int r){
+        int a = fact(n);
+        int b = fact(n - r);
+        int c = fact(r);
+        
+        int ans = a / (b * c);
+        System.out.println(ans);    
+    }
+    
+    public static int fact(int n){
+        int ans = 1;
+        for(int i = 1; i <= n; i++){
+            ans *= i;
+        }
+        return ans;
     }
 }
