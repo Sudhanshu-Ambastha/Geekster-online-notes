@@ -4,26 +4,27 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int T = scanner.nextInt();
-
-        for (int i = 0; i < T; i++) {
-            int n = scanner.nextInt();
-            boolean isArmstrong = checkArmstrong(n);
-            System.out.println(isArmstrong);
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        for (int i = 0; i < n; i++) {
+            int num = scn.nextInt();
+            boolean ans = isArmstrong(num);
+            System.out.println(ans);
         }
     }
 
-    public static boolean checkArmstrong(int n) {
-        int originalNumber, remainder, result = 0;
-        originalNumber = n;
-
-        while (originalNumber != 0) {
-            remainder = originalNumber % 10;
-            result += Math.pow(remainder, 3);
-            originalNumber /= 10;
+    public static boolean isArmstrong(int num) {
+        int ans = 0;
+        int temp = num;
+        while (num > 0) {
+            int rem = num % 10;
+            ans = ans + (rem * rem * rem);
+            num = num / 10;
         }
-
-        return result == n;
+        if (ans == temp) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -4,31 +4,25 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-
-        // Ensure n is within the constraints
-        if (n >= 1 && n <= 8) {
-            int formedNumber = 0;
-            for (int i = 0; i < n; i++) {
-                int digit = scanner.nextInt();
-                formedNumber = formedNumber * 10 + digit;
-            }
-
-            System.out.println("" + formedNumber);
-
-            int reversedNumber = 0;
-            while (formedNumber > 0) {
-                int lastDigit = formedNumber % 10;
-                reversedNumber = reversedNumber * 10 + lastDigit;
-                formedNumber /= 10;
-            }
-
-            System.out.println("" + reversedNumber);
-        } else {
-            System.out.println("The value of 'n' is out of the allowed range.");
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            int num = scn.nextInt();
+            ans = ans * 10 + num;
         }
+        System.out.println(ans);
+        int result = reverse(ans);
+        System.out.println(result);
+    }
 
-        scanner.close();
+    public static int reverse(int n) {
+        int reverse = 0;
+        while (n > 0) {
+            int rem = n % 10;
+            reverse = reverse * 10 + rem;
+            n = n / 10;
+        }
+        return reverse;
     }
 }
