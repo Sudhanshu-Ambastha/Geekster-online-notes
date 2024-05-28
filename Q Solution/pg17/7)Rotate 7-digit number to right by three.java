@@ -4,17 +4,22 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int T = scanner.nextInt();
+        Scanner scn = new Scanner(System.in);
+        int t = scn.nextInt();
 
-        for (int i = 0; i < T; i++) {
-            int num = scanner.nextInt();
-            int lastThreeDigits = num % 1000;
-            int firstFourDigits = num / 1000;
-            int rotatedNum = (lastThreeDigits * 10000) + firstFourDigits;
-            System.out.println(rotatedNum);
+        for (int i = 0; i < t; i++) {
+            int num = scn.nextInt();
+
+            int ans = rotateShift(num);
+            System.out.println(ans);
         }
+    }
 
-        scanner.close();
+    public static int rotateShift(int n) {
+        int a = n % 1000;
+        n = n / 1000;
+
+        int ans = (a * 10000) + n;
+        return ans;
     }
 }
