@@ -12,8 +12,10 @@ public class Solution {
             arr[i] = scanner.nextInt();
         }
 
-        for (int i = 1; i < n; i += 2) {
-            System.out.print(arr[i] + " ");
+        for (int i = 0; i < n; i++) {
+            if (arr[i] % 2 == 0) {
+                System.out.print(i + " ");
+            }
         }
     }
 }
