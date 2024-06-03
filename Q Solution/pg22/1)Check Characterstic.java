@@ -13,16 +13,18 @@ public class Solution {
             arr[i] = scanner.nextInt();
         }
 
-        System.out.println(calcSum(arr));
-    }
-
-    public static int calcSum(int[] arr) {
-        int sum = 0;
-
         for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
+            if (arr[i] > 0) {
+                arr[i] = 1;
+            } else if (arr[i] == 0) {
+                arr[i] = 0;
+            } else {
+                arr[i] = -1;
+            }
         }
 
-        return sum;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
