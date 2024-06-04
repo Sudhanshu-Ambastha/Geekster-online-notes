@@ -4,28 +4,28 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
         int[] arr = new int[n];
-
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            arr[i] = scn.nextInt();
         }
 
-        int left = sc.nextInt();
-        int right = sc.nextInt();
+        int left = scn.nextInt();
+        int right = scn.nextInt();
+        int x = scn.nextInt();
 
-        int x = sc.nextInt();
+        int[] ans = updateQuery(arr, n, left, right, x);
+        for (int i = 0; i < n; i++) {
+            System.out.print(ans[i] + " ");
+        }
+    }
+
+    public static int[] updateQuery(int[] arr, int n, int left, int right, int x) {
 
         for (int i = left; i <= right; i++) {
             arr[i] = x;
         }
-
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i]);
-            if (i < n - 1) {
-                System.out.print(" ");
-            }
-        }
+        return arr;
     }
 }

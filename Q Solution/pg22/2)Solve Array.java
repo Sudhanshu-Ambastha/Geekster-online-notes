@@ -4,27 +4,33 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
         int[] numbers = new int[n];
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scn.nextInt();
+        }
+
         int[] indexes = new int[n];
-
         for (int i = 0; i < n; i++) {
-            numbers[i] = scanner.nextInt();
+            indexes[i] = scn.nextInt();
         }
 
+        int[] ans = solveArray(n, numbers, indexes);
         for (int i = 0; i < n; i++) {
-            indexes[i] = scanner.nextInt();
+            System.out.print(ans[i] + " ");
         }
+    }
 
+    public static int[] solveArray(int n, int[] arr, int[] index) {
         int[] target = new int[n];
-
         for (int i = 0; i < n; i++) {
-            target[indexes[i]] = numbers[i];
-        }
+            int val = arr[i];
+            int idx = index[i];
 
-        for (int num : target) {
-            System.out.print(num + " ");
+            target[idx] = val;
         }
+        return target;
     }
 }
