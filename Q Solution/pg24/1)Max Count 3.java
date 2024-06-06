@@ -7,21 +7,31 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
-        Map<Integer, Integer> freqMap = new HashMap<>();
-
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
-            freqMap.put(arr[i], freqMap.getOrDefault(arr[i], 0) + 1);
         }
 
-        int maxFreq = 0, res = 0;
-        for (Map.Entry<Integer, Integer> entry : freqMap.entrySet()) {
-            if (entry.getValue() > maxFreq) {
-                maxFreq = entry.getValue();
-                res = entry.getKey();
+        maxCount(arr, n);
+    }
+
+    public static void maxCount(int[] arr, int n) {
+        int maxCount = 0;
+        int maxElement = 0;
+
+        for (int i = 0; i < n; i++) {
+            int count = 1;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                }
+            }
+
+            if (count > maxCount) {
+                maxCount = count;
+                maxElement = arr[i];
             }
         }
 
-        System.out.println(res);
+        System.out.println(maxElement);
     }
 }
