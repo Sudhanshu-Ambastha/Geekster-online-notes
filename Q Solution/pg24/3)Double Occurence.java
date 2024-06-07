@@ -17,12 +17,18 @@ public class Solution {
             arr2[i] = sc.nextInt();
         }
 
-        int[] count = new int[100001];
-        for (int i = 0; i < m; i++) {
-            count[arr2[i]]++;
-        }
+        checkDoubleOccurance(arr1, n, arr2, m);
+    }
+
+    public static void checkDoubleOccurance(int[] arr1, int n, int[] arr2, int m) {
         for (int i = 0; i < n; i++) {
-            if (count[arr1[i]] == 2) {
+            int count = 0;
+            for (int j = 0; j < m; j++) {
+                if (arr1[i] == arr2[j]) {
+                    count++;
+                }
+            }
+            if (count == 2) {
                 System.out.print(arr1[i] + " ");
             }
         }
