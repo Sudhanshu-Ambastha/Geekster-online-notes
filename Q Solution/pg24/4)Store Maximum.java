@@ -4,44 +4,35 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] height = new int[n];
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            height[i] = scanner.nextInt();
+            arr[i] = scn.nextInt();
         }
 
-        System.out.println(trap(height));
+        System.out.println(trap(arr, n));
     }
 
-    public static int trap(int[] height) {
-        if (height == null || height.length == 0) {
-            return 0;
-        }
-
-        int n = height.length;
-        int left = 0, right = n - 1;
-        int leftMax = 0, rightMax = 0;
-        int waterTrapped = 0;
-
-        while (left <= right) {
-            if (height[left] <= height[right]) {
-                if (height[left] >= leftMax) {
-                    leftMax = height[left];
-                } else {
-                    waterTrapped += leftMax - height[left];
+    public static int trap(int[] arr, int n) {
+        int result = 0;
+        for (int i = 0; i < n; i++) {
+            int leftMax = Integer.MIN_VALUE;
+            for (int j = 0; j <= i; j++) {
+                if (arr[j] > leftMax) {
+                    leftMax = arr[j];
                 }
-                left++;
-            } else {
-                if (height[right] >= rightMax) {
-                    rightMax = height[right];
-                } else {
-                    waterTrapped += rightMax - height[right];
-                }
-                right--;
             }
+            int rightMax = Integer.MIN_VALUE;
+            for (int j = i; j < n; j++) {
+                if (arr[j] > rightMax) {
+                    rightMax = arr[j];
+                }
+            }
+            int ans = Math.min(leftMax, rightMax);
+            int water = ans - arr[i];
+            result += water;
         }
-
-        return waterTrapped;
+        return result;
     }
 }
