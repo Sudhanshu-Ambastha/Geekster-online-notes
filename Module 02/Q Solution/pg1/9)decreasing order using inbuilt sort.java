@@ -11,15 +11,10 @@ public class Solution {
             arr[i] = scanner.nextInt();
         }
 
-        sortArrayInDescendingOrder(arr);
-    }
-
-    public static void sortArrayInDescendingOrder(Integer[] arr) {
-        // Sort the array in descending order
-        Arrays.sort(arr, (a, b) -> b.compareTo(a));
+        Arrays.sort(arr, Collections.reverseOrder());
 
         // Print the sorted array
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
     }
