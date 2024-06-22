@@ -5,51 +5,54 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        int N = sc.nextInt();
-        int[] A = new int[N];
-
-        for (int i = 0; i < N; i++) {
-            A[i] = sc.nextInt();
+        int n = sc.nextInt();
+        int arr1[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr1[i] = sc.nextInt();
         }
 
-        int M = sc.nextInt();
-        int[] B = new int[M];
-
-        for (int i = 0; i < M; i++) {
-            B[i] = sc.nextInt();
+        int m = sc.nextInt();
+        int arr2[] = new int[m];
+        for (int i = 0; i < m; i++) {
+            arr2[i] = sc.nextInt();
         }
 
-        int[] mergedArray = mergeArrays(A, B);
-
+        int[] mergedArray = mergeArrays(arr1, n, arr2, m);
         for (int num : mergedArray) {
             System.out.print(num + " ");
         }
     }
 
-    public static int[] mergeArrays(int[] A, int[] B) {
-        int n = A.length;
-        int m = B.length;
-        int[] merged = new int[n + m];
-
-        int i = 0, j = 0, k = 0;
+    public static int[] mergeArrays(int arr1[], int n, int arr2[], int m) {
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int ans[] = new int[n + m];
 
         while (i < n && j < m) {
-            if (A[i] <= B[j]) {
-                merged[k++] = A[i++];
+            if (arr1[i] < arr2[j]) {
+                ans[k] = arr1[i];
+                k++;
+                i++;
             } else {
-                merged[k++] = B[j++];
+                ans[k] = arr2[j];
+                j++;
+                k++;
             }
         }
 
         while (i < n) {
-            merged[k++] = A[i++];
+            ans[k] = arr1[i];
+            k++;
+            i++;
         }
 
         while (j < m) {
-            merged[k++] = B[j++];
+            ans[k] = arr2[j];
+            j++;
+            k++;
         }
 
-        return merged;
+        return ans;
     }
 }
