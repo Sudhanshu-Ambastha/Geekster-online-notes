@@ -4,21 +4,32 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        String[] arr = new String[n];
-
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = String.valueOf(scanner.nextInt());
+            arr[i] = scn.nextInt();
         }
 
-        Arrays.sort(arr, (a, b) -> (b + a).compareTo(a + b));
+        System.out.println(formLargestNumber(arr, n));
+    }
 
-        StringBuilder result = new StringBuilder();
-        for (String str : arr) {
-            result.append(str);
+    public static String formLargestNumber(int[] arr, int n) {
+        String[] arr1 = new String[n];
+        for (int i = 0; i < n; i++) {
+            arr1[i] = Integer.toString(arr[i]);
         }
 
-        System.out.println(result);
+        Arrays.sort(arr1, (a, b) -> {
+            String str1 = a + b;
+            String str2 = b + a;
+            return str2.compareTo(str1);
+        });
+
+        String ans = "";
+        for (int i = 0; i < n; i++) {
+            ans = ans + arr1[i];
+        }
+        return ans;
     }
 }
