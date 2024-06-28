@@ -2,7 +2,7 @@
 
 [hacker-rank m2](https://www.hackerrank.com/contests/fs-23-m2-java-dsa-class-challenges/challenges/filters/page:4)
 
-[Geekster-online-class](https://www.geekster.in/course/65fbe7cf17045a6119075f90/?lecture=6628fe261f1ec3f116c8bb03&attend=true)
+[Geekster-online-class](https://www.geekster.in/course/66701a83711309aa6bf252cd/?lecture=66792559508a963f5a43138f&attend=true)
 
 [Test](https://www.geekster.in/programme/v1/new-full-stack-web-development-program/)
 
