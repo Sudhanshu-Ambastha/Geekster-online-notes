@@ -7,32 +7,30 @@ public class Solution {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int[] arr = new int[n];
+
         for (int i = 0; i < n; i++) {
             arr[i] = scn.nextInt();
         }
-        System.out.println(deDuplicate(arr, n));
+
+        System.out.println(uniqueSum(arr, n));
     }
 
-    public static int deDuplicate(int[] arr, int n) {
-        if (arr.length <= 2) {
-            return arr.length;
+    public static int uniqueSum(int[] nums, int n) {
+        int max = 100000;
+        int[] freq = new int[max + 1];
+
+        for (int i = 0; i < n; i++) {
+            freq[nums[i]]++;
         }
 
-        int j = 1;
-        int count = 1;
+        int sum = 0;
 
-        for (int i = 1; i < n; i++) {
-            if (arr[i] == arr[i - 1]) {
-                count++;
-            } else {
-                count = 1;
-            }
-
-            if (count <= 2) {
-                arr[j++] = arr[i];
+        for (int i = 0; i <= max; i++) {
+            if (freq[i] == 1) {
+                sum += i;
             }
         }
 
-        return j;
+        return sum;
     }
 }
