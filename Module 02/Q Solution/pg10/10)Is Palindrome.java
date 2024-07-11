@@ -4,9 +4,8 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        String str = scanner.next();
+        Scanner scn = new Scanner(System.in);
+        String str = scn.nextLine();
         if (isPalindrome(str)) {
             System.out.println("Palindrome");
         } else {
@@ -15,15 +14,15 @@ public class Solution {
     }
 
     public static boolean isPalindrome(String str) {
-        int left = 0;
-        int right = str.length() - 1;
+        int si = 0;
+        int ei = str.length() - 1;
 
-        while (left < right) {
-            if (str.charAt(left) != str.charAt(right)) {
+        while (si < ei) {
+            if (str.charAt(si) != str.charAt(ei)) {
                 return false;
             }
-            left++;
-            right--;
+            si++;
+            ei--;
         }
 
         return true;
