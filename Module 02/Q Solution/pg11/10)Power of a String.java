@@ -6,25 +6,23 @@ public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        int power = calculatePower(str);
-        System.out.println(power);
+
+        System.out.println(powerOfString(str));
     }
 
-    static int calculatePower(String str) {
-        int maxPower = 1;
-        int currentPower = 1;
+    static int powerOfString(String str) {
+        int len = 1;
+        int ans = 0;
 
-        for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i) == str.charAt(i - 1)) {
-                currentPower++;
-                if (currentPower > maxPower) {
-                    maxPower = currentPower;
-                }
+        for (int i = 0; i <= str.length() - 2; i++) {
+            if (str.charAt(i) == str.charAt(i + 1)) {
+                len++;
             } else {
-                currentPower = 1;
+                ans = Math.max(ans, len);
+                len = 1;
             }
         }
-
-        return maxPower;
+        ans = Math.max(ans, len);
+        return ans;
     }
 }
