@@ -5,14 +5,17 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s1 = sc.nextLine();
-        String s2 = sc.nextLine();
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
 
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < s1.length(); i++) {
-            result.append(s1.charAt(i));
-            result.append(s2.charAt(i));
+        System.out.println(merge2Strings(str1, str2));
+    }
+
+    public static String merge2Strings(String str1, String str2) {
+        String ans = "";
+        for (int i = 0; i < str1.length(); i++) {
+            ans = ans + str1.charAt(i) + str2.charAt(i);
         }
-        System.out.println(result.toString());
+        return ans;
     }
 }

@@ -5,21 +5,25 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        String name = scn.next();
+        String str = scn.next();
         String typed = scn.next();
-        System.out.println(isLongPressedName(name, typed));
+        System.out.println(longPressed(str, typed));
     }
 
-    public static boolean isLongPressedName(String name, String typed) {
+    public static boolean longPressed(String str, String typed) {
         int i = 0, j = 0;
         while (j < typed.length()) {
-            if (i < name.length() && name.charAt(i) == typed.charAt(j)) {
+            if (i < str.length() && str.charAt(i) == typed.charAt(j)) {
                 i++;
             } else if (j == 0 || typed.charAt(j) != typed.charAt(j - 1)) {
                 return false;
             }
             j++;
         }
-        return i == name.length();
+        if (i == str.length()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
