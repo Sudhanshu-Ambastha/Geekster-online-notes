@@ -6,61 +6,54 @@ public class Solution {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        int[] boards = new int[n];
+        int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            boards[i] = scn.nextInt();
+            arr[i] = scn.nextInt();
         }
-        int k = scn.nextInt();
-
-        // To find the minimum time required
-        System.out.println(findMinimumTime(boards, k));
-        scn.close();
+        int painters = scn.nextInt();
+        System.out.println(thePainters(arr, n, painters));
     }
 
-    public static int findMinimumTime(int[] boards, int k) {
-        int maxBoardLength = 0;
-        int totalLength = 0;
-
-        // Find total length and maximum board length
-        for (int board : boards) {
-            totalLength += board;
-            maxBoardLength = Math.max(maxBoardLength, board);
-        }
-
-        // Binary search for the answer
-        int left = maxBoardLength; // Lower bound (max single board)
-        int right = totalLength; // Upper bound (total length of boards)
-
-        while (left < right) {
-            int mid = (left + right) / 2;
-            if (canPaintInTime(boards, k, mid)) {
-                right = mid; // Try for a lower time
+    public static int thePainters(int[] arr, int n, int painters) {
+        int si = max(arr);
+        int ei = sum(arr);
+        while (si <= ei) {
+            int mid = (si + ei) / 2;
+            if (check(arr, mid) > painters) {
+                si = mid + 1;
             } else {
-                left = mid + 1; // Increase the time
+                ei = mid - 1;
             }
         }
-
-        return left; // Minimum time found
+        return si;
     }
 
-    public static boolean canPaintInTime(int[] boards, int k, int mid) {
-        int paintersRequired = 1;
-        int currentSum = 0;
-
-        for (int board : boards) {
-            currentSum += board;
-            if (currentSum > mid) {
-                // If the current painter exceeds the allowed time
-                paintersRequired++;
-                currentSum = board; // Assign this board to the new painter
-
-                // If number of painters exceeds k, return false
-                if (paintersRequired > k) {
-                    return false;
-                }
+    public static int check(int[] arr, int time) {
+        int painters = 1;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            if (sum > time) {
+                painters++;
+                sum = arr[i];
             }
         }
+        return painters;
+    }
 
-        return true; // Can paint with given painters in time mid
+    public static int max(int[] arr) {
+        int ans = 0;
+        for (int i = 0; i < arr.length; i++) {
+            ans = Math.max(ans, arr[i]);
+        }
+        return ans;
+    }
+
+    public static int sum(int[] arr) {
+        int ans = 0;
+        for (int i = 0; i < arr.length; i++) {
+            ans = ans + arr[i];
+        }
+        return ans;
     }
 }
