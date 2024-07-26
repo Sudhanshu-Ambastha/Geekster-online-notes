@@ -4,39 +4,38 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        System.out.println(evaluatePostfix(str));
-    }
+        Scanner scanner = new Scanner(System.in);  
+        String str = scanner.nextLine();  
+        System.out.println(postfixCalculate(str));   
+    }   
 
-    private static int evaluatePostfix(String str) {
-        Stack<Integer> stack = new Stack<>();
-
-        for (char ch : str.toCharArray()) {
-            if (Character.isDigit(ch)) {
-                stack.push(ch - '0');
-            } else {
-                int b = stack.pop();
-                int a = stack.pop();
-                int result = 0;
-
-                switch (ch) {
-                    case '+':
-                        result = a + b;
-                        break;
-                    case '-':
-                        result = a - b;
-                        break;
-                    case '*':
-                        result = a * b;
-                        break;
-                    case '/':
-                        result = a / b;
-                        break;
-                }
-                stack.push(result);
-            }
-        }
-        return stack.pop();
-    }
-}
+    private static int postfixCalculate(String str) {   
+        Stack<Integer> st = new Stack<>();   
+        
+        for (int i = 0; i < str.length(); i++) {   
+            char curr = str.charAt(i);  
+            
+            if (Character.isDigit(curr)) {  
+                st.push(curr - '0');   
+            } else {    
+                int top1 = st.peek(); 
+                st.pop();
+                int top2 = st.peek();   
+                st.pop();
+                int ans = 0;   
+                if (curr == '+') {  
+                    ans = top2 + top1;  
+                } else if (curr == '-') {  
+                    ans = top2 - top1;  
+                } else if (curr == '*') {  
+                    ans = top2 * top1;  
+                } else if (curr == '/') {  
+                    ans = top2 / top1;  
+                }  
+                
+                st.push(ans);   
+            }   
+        }     
+        return st.peek();  
+    }   
+}  
