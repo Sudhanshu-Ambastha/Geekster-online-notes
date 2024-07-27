@@ -4,38 +4,36 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
         int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
-            arr[i] = s.nextInt();
+            arr[i] = scanner.nextInt();
         }
 
-        int result[] = nextSmallerElement(arr);
+        int[] ans = nextGreaterElements(arr, n);
 
-        for (int res : result) {
-            System.out.print(res + " ");
+        for (int i : ans) {
+            System.out.print(i + " ");
         }
     }
 
-    public static int[] nextSmallerElement(int arr[]) {
-        int n = arr.length;
-        int result[] = new int[n];
+    public static int[] nextGreaterElements(int[] arr, int n) {
         Stack<Integer> st = new Stack<>();
+        int[] ans = new int[n];
 
-        for (int i = n - 1; i >= 0; i--) {
-            while (!st.isEmpty() && st.peek() >= arr[i]) {
+        for (int i = 0; i < n; i++) {
+            while (!st.isEmpty() && st.peek() <= arr[i]) {
                 st.pop();
             }
             if (st.isEmpty()) {
-                result[i] = -1;
+                ans[i] = -1;
             } else {
-                result[i] = st.peek();
+                ans[i] = st.peek();
             }
             st.push(arr[i]);
         }
-
-        return result;
+        return ans;
     }
 }
