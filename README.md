@@ -1,5 +1,3 @@
-# Geekster Online Notes
-
 [hacker-rank m1](https://www.hackerrank.com/contests/fs-23-java-dsa-class-challenges/challenges/filters/page:1)
 
 [hacker-rank m2](https://www.hackerrank.com/contests/fs-23-m2-java-dsa-class-challenges/challenges/filters/page:1)
