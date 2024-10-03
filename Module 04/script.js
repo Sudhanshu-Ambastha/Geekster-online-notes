@@ -1,3 +1,5 @@
+/***************************    Day2    ***************************/
+
 // console.log("Hello World");
 
 /*let a = 10;
@@ -31,6 +33,11 @@ let player = {
     hobbies:["cricket", "football", "reading"],
     rollNo:21,
 }
+
+// for(let key in player){
+//   delete player[key];
+// }
+
 
 /*add an object*/
 /*player.stats = {matchesPlayed: 50};
