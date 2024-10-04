@@ -1,80 +1,121 @@
-/***************************    Day2    ***************************/
+/*********************************************************************   Day3   ******************************************************************/
 
-// console.log("Hello World");
+//for loop
+// for(let i = 0; i < 5; i++){
+//     console.log(i);
+// }
+// Output
+/*0
+1
+2
+3
+4*/
 
-/*let a = 10;
-a=1;
-var b = 20;   //can be redeclared
-b=2; */
+// while loop
+// let i = 0;
+// while(i < 5){
+//     console.log(i);
+//     i++;
+// }
+/*Output
+0
+1
+2
+3
+4*/
 
-/*const c = 30;  
-c=3;*/ //can't be redeclared
-// console.log(a,b,c);
+//do while loop
+// let j = 0;
 
-//Data type:- null is non primitive
-// let a = 20; //number
-// let b = true; //boolean
-// let c = "SA"; //string
-// let d = null; //Object as everything in js behave like an object and if we resolve it, it will lead to lose of so many func of js 
-// let e = undefined; //undefined
-// let f = BigInt(746358347); //bigint
-// let g = Symbol("SA"); //symbol
-// let h = null; 
-// console.log(typeof a, typeof b, typeof c, typeof d, typeof e, typeof f, typeof g, typeof h); /*output: number boolean string object undefined bigint symbol undefined*/
-// console.log(typeof a, typeof b, typeof c, typeof d, typeof e, typeof f, typeof g, h); /*output: number boolean string object undefined bigint symbol null*/
-// console.log(BigInt, Symbol); /* output: [Function: BigInt] [Function: Symbol]*/
-// h = "SA";
+// do{
+//     console.log(j);
+//     j++;
+// }while(j < 5);
 
-/*creation of an object*/
-let player = {
-    name:"SKA",
-    age: "20",
-    marks: 100,
-    hobbies:["cricket", "football", "reading"],
-    rollNo:21,
+/*Output
+0
+1
+2
+3
+4*/
+
+//Switch case
+/*let str = 'case1';
+
+switch(str){
+    case 'case1':
+        console.log('case1');
+        break;
+    case 'case2':
+        console.log('case2');
+        break;
+    default:
+        console.log('default');
+        break;
+    }*/
+//Output: case1 
+
+//Array
+let arr = [];
+arr[0] = 10;
+arr[1] = 'sa';
+arr[2] = 10.1;
+arr[3] = {
+    name: 'sa',
+    age: 20
+};
+
+console.log(arr);
+//[ 10, 'sa', 10.1, { name: 'sa', age: 20 } ]
+
+/*for(let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
 }
 
-// for(let key in player){
-//   delete player[key];
-// }
+arr.forEach((element) => {
+    console.log(element);
+});*/
 
+//callIt - HOC (higher order func) //! Important for interview Q
+/*function callIt(callBack){
+    let a = 10;
+    callBack(a);
+}
 
-/*add an object*/
-/*player.stats = {matchesPlayed: 50};
-console.log(player);*/
-//output of adding the player
-/*{
-  name: 'SKA',
-  age: '20',
-  marks: 100,
-  hobbies: [ 'cricket', 'football', 'reading' ],
-  rollNo: 21,
-  stats: { matchesPlayed: 50 }
-}*/
+callIt(function(a){
+    console.log(a, 'call back');
+});*/
 
-//update an object              
-/*player.name = "sa";
-player.age = 21;
-console.log(player);*/
-
-/*updated arr of player as output*/
-/*{
-  name: 'sa',
-  age: 21,
-  marks: 100,
-  hobbies: [ 'cricket', 'football', 'reading' ],
-  rollNo: 21
-}*/
-
-/*delete an object*/
-/*delete player.marks;
-console.log(player);*/
-
-/*reading an object*/
-// console.log(player.hobbies);/*[ 'cricket', 'football', 'reading' ]*/
-// console.log(player.hobbies[1]);/*football*/
-
+//Stack
 /*let arr = [];
-arr['a'] = 3;
-arr['b'] = 6;
-console.log(arr.length);*/ //0
+arr.push(10);
+arr.push(20);
+
+arr.unshift(30); //[ 30, 10, 20 ]
+
+arr.pop(); //[ 30, 10 ]
+arr.shift(); //[ 10 ]
+
+console.log(arr);*/
+
+//
+let newArr = [1,2,3,1]; //past arr: [2,1]
+//let one = newArr.includes(1); //true/false if 1 present in arr
+//let idx = newArr.indexOf(45); //-1 if not present else idx of no. position
+/*if(idx === -1){
+    console.log('not exists');
+}else{
+    console.log('exists')
+}
+console.log(idx);*/ //-1
+
+//Slice don't change original arr
+//slice === substring //current arr: [1,2,3,1]
+let removedArrEle = newArr.slice(1,2);
+console.log(removedArrEle);//[ 2 ]
+console.log(newArr);//[ 1, 2, 3, 1 ]
+
+//Splice change original arr
+let remArrEle = newArr.splice(1,2);
+console.log(remArrEle);//[ 2, 3 ]
+console.log(newArr);//[ 1, 1 ]
