@@ -1,0 +1,34 @@
+<!--Q2. write a function sumInput(), ask values from user and store in to an array finish asking values if user has given any non-numeric 
+String or press cancel calculates the sum & return that  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript is amazing 🔥</h1>
+    <script>
+    function sumInput() {
+        let arr = [];
+        while (true) {
+            let value = prompt("Enter a number");
+            if (value === null || value === "") break; 
+        /*on null or empty input breaks or got cancel & if we cancel it returns null 
+          or if used isFinite if more then limit it ends and output nan*/
+            arr.push(+value);
+        }
+        
+        let sum = 0;
+        for (let number of arr) {
+            sum += number;
+        }
+        
+        return sum;
+    }
+
+    alert(sumInput());
+    </script>
+</body>
+</html>

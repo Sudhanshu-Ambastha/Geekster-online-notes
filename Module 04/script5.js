@@ -1,9 +1,8 @@
 //Function declaration
 function sum(a,b){
     return a+b;
-    //after this line there is no use to write code as after this it is temporal dead zone.
+    //after this line there is no use to write code as after this it is TDZ(Temporal Dead Zone).
 }
-
 //Function Calling
 let ans = sum(10,20);
 console.log(ans);
@@ -121,3 +120,4 @@ function hello(){
     console.log(sa);
 }
 hello(); //10
+
