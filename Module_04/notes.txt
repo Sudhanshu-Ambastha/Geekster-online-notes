@@ -1,0 +1,29 @@
+what is js?
+
+Diff between var, let, const
+scoping,hoisting
+
+what is lexical environment?
+
+what is temporal dead zone:-
+doesn't got executed like after return statement anything after it doesn't get executed.
+
+what is HOF?
+HOF = Higher order function(kind a regular func but it takes one or more func as arguments or return a func as a value from it)
+
+what is IIFE?
+Immediately invoked function expression (IIFE), as soon as you declare you call it 
+
+What is DOM?
+The Document Object Model (DOM) is a programming interface for web documents:
+. It represents the page so that programs can change the document structure, style, and content1
+. Essentially, the DOM is a tree-like structure that represents the HTML or XML document, where each node is an object representing a part of the document
+. for fetching the html element to js for manipulation
+
+diff between html collection and Node list?
+can use for each in node list but can't used in html collection.
+
+what is AddEventListner and tell me some of the events?
+
+what is event propagation?
+what is event bubbling and event capturing(part of propagation)?
