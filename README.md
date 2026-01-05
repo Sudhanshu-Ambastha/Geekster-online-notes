@@ -20,3 +20,11 @@ cd Module_04 && node script11.js
 ```
 node script.js
 ``` 
+
+- file name == class name for ex class == Main then file name is also == Main
+```
+javac Main.java
+```
+```
+java Main
+```
